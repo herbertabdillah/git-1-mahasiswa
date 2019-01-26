@@ -14,16 +14,22 @@ import static console.Main.input;
 public class Penilaian {
     public static void menuPenilaian(){
         while(true){
+            double rata = 0;
+
             System.out.println("no, nim, nama, formatif, uts, uas, total");
             for(int i = 0; i < logic.Mahasiswa.arrayMahasiswa.size(); i++){
                 logic.Mahasiswa mahasiswa = logic.Mahasiswa.arrayMahasiswa.get(i);
                 System.out.println((i+1) + ", " + mahasiswa.getNim() + ", " + mahasiswa.getNama() + ", " +
                         mahasiswa.getFormatif() + ", " + mahasiswa.getUts() + ", " + mahasiswa.getUas() + ", " + mahasiswa.getTotal());
+                
+                rata = rata + mahasiswa.getTotal();
+
             }
+            rata = rata / logic.Mahasiswa.arrayMahasiswa.size();
+            System.out.println("Rata-rata : " + rata);
+
             System.out.println();
             System.out.println("1. Isi nilai");
-            System.out.println("2. Hapus");
-            System.out.println("3. Edit");
             System.out.println("0. Kembali");
             System.out.println("Pilihan : ");
 
