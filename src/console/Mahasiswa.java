@@ -30,7 +30,7 @@ public class Mahasiswa {
             if (pilihan.equals("1")) {
                 tambahMahasiswa();
             } else if (pilihan.equals("2")) {
-                System.out.println("Belum Di Coding Broo!");
+                hapusMahasiswa();
             } else if (pilihan.equals("3")) {
                 System.out.println("Belum Di Coding Broo!");
             } else {
@@ -44,5 +44,11 @@ public class Mahasiswa {
         System.out.println("Nama : ");
         String nama = input.nextLine();
         logic.Mahasiswa.tambahMahasiswa(nama, nim);
+    }
+    public static void hapusMahasiswa(){
+        System.out.println("Masukan no (bukan NIM) : ");
+        int index = input.nextInt();
+        index = index - 1;
+        logic.Mahasiswa.arrayMahasiswa.remove(index);
     }
 }
