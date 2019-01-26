@@ -48,12 +48,14 @@ public class Mahasiswa {
     public static void hapusMahasiswa(){
         System.out.println("Masukan no (bukan NIM) : ");
         int index = input.nextInt();
+        input.nextLine();
         index = index - 1;
         logic.Mahasiswa.arrayMahasiswa.remove(index);
     }
     public static void editMahasiswa(){
         System.out.println("Masukan no (bukan NIM) : ");
         int index = input.nextInt();
+        input.nextLine();
         index = index - 1;
         logic.Mahasiswa mahasiswa = logic.Mahasiswa.arrayMahasiswa.get(index); 
         System.out.println("Nim : ");
