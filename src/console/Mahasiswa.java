@@ -28,7 +28,7 @@ public class Mahasiswa {
 
             String pilihan = input.nextLine();
             if (pilihan.equals("1")) {
-                System.out.println("Belum Di Coding Broo!");
+                tambahMahasiswa();
             } else if (pilihan.equals("2")) {
                 System.out.println("Belum Di Coding Broo!");
             } else if (pilihan.equals("3")) {
@@ -37,6 +37,12 @@ public class Mahasiswa {
                return;
             }               
         }
-
+    }
+    public static void tambahMahasiswa(){
+        System.out.println("Nim : ");
+        String nim = input.nextLine();
+        System.out.println("Nama : ");
+        String nama = input.nextLine();
+        logic.Mahasiswa.tambahMahasiswa(nama, nim);
     }
 }
