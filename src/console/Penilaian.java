@@ -21,7 +21,7 @@ public class Penilaian {
                         mahasiswa.getFormatif() + ", " + mahasiswa.getUts() + ", " + mahasiswa.getUas() + ", " + mahasiswa.getTotal());
             }
             System.out.println();
-            System.out.println("1. Tambah");
+            System.out.println("1. Isi nilai");
             System.out.println("2. Hapus");
             System.out.println("3. Edit");
             System.out.println("0. Kembali");
@@ -29,7 +29,7 @@ public class Penilaian {
 
             String pilihan = input.nextLine();
             if (pilihan.equals("1")) {
-                System.out.println("Belum Di Coding Broo!");
+                isiNilai();
             } else if (pilihan.equals("2")) {
                 System.out.println("Belum Di Coding Broo!");
             } else if (pilihan.equals("3")) {
@@ -39,5 +39,22 @@ public class Penilaian {
             }              
         }
 
-    }    
+    }
+    public static void isiNilai(){
+        System.out.println("Masukan no (bukan NIM) : ");
+        int index = input.nextInt();
+        input.nextLine();
+        index = index - 1;
+        logic.Mahasiswa mahasiswa = logic.Mahasiswa.arrayMahasiswa.get(index); 
+        System.out.println("Formatif : ");
+        double formatif = input.nextDouble();
+        input.nextLine();
+        System.out.println("UTS : ");
+        double uts = input.nextDouble();
+        input.nextLine();
+        System.out.println("UAS : ");
+        double uas = input.nextDouble();
+        input.nextLine();
+        mahasiswa.setSemuaNilai(formatif, uts, uas);
+    }
 }
