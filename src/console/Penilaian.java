@@ -16,7 +16,8 @@ public class Penilaian {
         while(true){
             double rata = 0;
             double tertinggi = -9999;
-            
+            double terendah = 99999;
+                        
             System.out.println("no, nim, nama, formatif, uts, uas, total");
             for(int i = 0; i < logic.Mahasiswa.arrayMahasiswa.size(); i++){
                 logic.Mahasiswa mahasiswa = logic.Mahasiswa.arrayMahasiswa.get(i);
@@ -25,10 +26,12 @@ public class Penilaian {
                 
                 rata = rata + mahasiswa.getTotal();
                 tertinggi = mahasiswa.getTotal() > tertinggi ? mahasiswa.getTotal() : tertinggi;
+                terendah = mahasiswa.getTotal() < terendah ? mahasiswa.getTotal() : terendah;                
             }
             rata = rata / logic.Mahasiswa.arrayMahasiswa.size();
             System.out.println("Rata-rata : " + rata);
             System.out.println("Tertinggi: " + tertinggi);
+            System.out.println("Terendah: " + terendah);            
 
             System.out.println();
             System.out.println("1. Isi nilai");
