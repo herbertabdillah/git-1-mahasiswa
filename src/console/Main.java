@@ -37,39 +37,9 @@ public class Main {
         } else if (pilihan.equals("2")) {
             console.Mahasiswa.menuMahasiswa();
         } else if (pilihan.equals("3")) {
-            menuPenilaian();
+            console.Penilaian.menuPenilaian();
         } else {
            System.exit(0);
         }       
     }
-
-    public static void menuPenilaian(){
-        while(true){
-            System.out.println("no, nim, nama, formatif, uts, uas, total");
-            for(int i = 0; i < Mahasiswa.arrayMahasiswa.size(); i++){
-                Mahasiswa mahasiswa = Mahasiswa.arrayMahasiswa.get(i);
-                System.out.println((i+1) + ", " + mahasiswa.getNim() + ", " + mahasiswa.getNama() + ", " +
-                        mahasiswa.getFormatif() + ", " + mahasiswa.getUts() + ", " + mahasiswa.getUas() + ", " + mahasiswa.getTotal());
-            }
-            System.out.println();
-            System.out.println("1. Tambah");
-            System.out.println("2. Hapus");
-            System.out.println("3. Edit");
-            System.out.println("0. Kembali");
-            System.out.println("Pilihan : ");
-
-            String pilihan = input.nextLine();
-            if (pilihan.equals("1")) {
-                System.out.println("Belum Di Coding Broo!");
-            } else if (pilihan.equals("2")) {
-                System.out.println("Belum Di Coding Broo!");
-            } else if (pilihan.equals("3")) {
-                System.out.println("Belum Di Coding Broo!");
-            } else {
-               return;
-            }              
-        }
-
-    }
-    
 }
