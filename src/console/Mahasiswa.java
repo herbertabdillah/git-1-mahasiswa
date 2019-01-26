@@ -32,7 +32,7 @@ public class Mahasiswa {
             } else if (pilihan.equals("2")) {
                 hapusMahasiswa();
             } else if (pilihan.equals("3")) {
-                System.out.println("Belum Di Coding Broo!");
+                editMahasiswa();
             } else {
                return;
             }               
@@ -50,5 +50,16 @@ public class Mahasiswa {
         int index = input.nextInt();
         index = index - 1;
         logic.Mahasiswa.arrayMahasiswa.remove(index);
+    }
+    public static void editMahasiswa(){
+        System.out.println("Masukan no (bukan NIM) : ");
+        int index = input.nextInt();
+        index = index - 1;
+        logic.Mahasiswa mahasiswa = logic.Mahasiswa.arrayMahasiswa.get(index); 
+        System.out.println("Nim : ");
+        String nim = input.nextLine();
+        System.out.println("Nama : ");
+        String nama = input.nextLine();
+        mahasiswa.setNamaNim(nama, nim);
     }
 }
