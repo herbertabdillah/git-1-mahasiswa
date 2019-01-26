@@ -22,8 +22,7 @@ public class Penilaian {
             for(int i = 0; i < logic.Mahasiswa.arrayMahasiswa.size(); i++){
                 logic.Mahasiswa mahasiswa = logic.Mahasiswa.arrayMahasiswa.get(i);
                 System.out.println((i+1) + ", " + mahasiswa.getNim() + ", " + mahasiswa.getNama() + ", " +
-                        mahasiswa.getFormatif() + ", " + mahasiswa.getUts() + ", " + mahasiswa.getUas() + ", " + mahasiswa.getTotal());
-                
+                        mahasiswa.getFormatif() + ", " + mahasiswa.getUts() + ", " + mahasiswa.getUas() + ", " + mahasiswa.getTotal());                
                 rata = rata + mahasiswa.getTotal();
                 tertinggi = mahasiswa.getTotal() > tertinggi ? mahasiswa.getTotal() : tertinggi;
                 terendah = mahasiswa.getTotal() < terendah ? mahasiswa.getTotal() : terendah;                
@@ -49,7 +48,6 @@ public class Penilaian {
                return;
             }              
         }
-
     }
     public static void isiNilai(){
         System.out.println("Masukan no (bukan NIM) : ");
